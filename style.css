@@ -1,0 +1,115 @@
+:root {
+    --emerald: #043927;
+    --gold: #c5a059;
+    --cream: #f9f7f2;
+    --dark: #1a1a1a;
+}
+
+* { box-sizing: border-box; }
+body { 
+    margin: 0; 
+    font-family: 'Lato', sans-serif; 
+    background-color: var(--cream); 
+    color: var(--dark);
+    line-height: 1.8;
+}
+
+.container { max-width: 1100px; margin: auto; padding: 0 20px; }
+
+/* Hero */
+.hero {
+    height: 100vh;
+    background: url('1000661512.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+.overlay {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to bottom, rgba(4,57,39,0.7), rgba(0,0,0,0.9));
+}
+.hero-content { z-index: 10; }
+.hero h1 { font-family: 'Cinzel'; font-size: 3.5rem; margin: 10px 0; }
+.gold-text { color: var(--gold); }
+.anniversary-tag { 
+    border: 1px solid var(--gold); 
+    padding: 10px 30px; 
+    display: inline-block; 
+    text-transform: uppercase; 
+    letter-spacing: 4px;
+}
+
+/* Enhancing Old Images */
+.enhanced-img {
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    /* Modern filter to sharpen old scans */
+    filter: contrast(1.1) saturate(1.1) brightness(1.02);
+    border: 10px solid white;
+}
+
+/* Letter Section */
+.letter-section { padding: 100px 0; background: #ece8e1; }
+.letter-paper {
+    background: white;
+    padding: 60px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border-radius: 2px;
+    position: relative;
+}
+.letter-paper::before {
+    content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 5px; background: var(--gold);
+}
+.letter-title { font-family: 'Cinzel'; color: var(--emerald); text-align: center; }
+.letter-content { font-size: 1.15rem; max-width: 800px; margin: auto; }
+.signature { font-family: 'Great Vibes', cursive; font-size: 2rem; color: var(--gold); margin-top: 30px; }
+
+/* Dua Section */
+.dua-section { 
+    background: var(--emerald); 
+    color: white; 
+    padding: 80px 0; 
+    text-align: center;
+}
+.dua-box {
+    max-width: 700px;
+    margin: auto;
+    border: 2px solid var(--gold);
+    padding: 40px;
+}
+.arabic-text { font-size: 1.8rem; color: var(--gold); margin-bottom: 20px; }
+.amen { font-weight: bold; font-size: 1.4rem; color: var(--gold); margin-top: 20px; }
+
+/* Grid */
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; padding: 100px 0; }
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+.gallery-item img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    filter: grayscale(30%);
+    transition: 0.4s;
+}
+.gallery-item img:hover { filter: grayscale(0%); transform: scale(1.02); }
+
+/* Typography */
+.section-title { font-family: 'Cinzel'; font-size: 2.5rem; text-align: center; }
+.section-title.left { text-align: left; }
+
+@media (max-width: 768px) {
+    .grid { grid-template-columns: 1fr; text-align: center; }
+    .section-title.left { text-align: center; }
+    .hero h1 { font-size: 2rem; }
+    .letter-paper { padding: 30px; }
+}
+
+footer { text-align: center; padding: 40px; background: var(--dark); color: #666; font-size: 0.9rem; }
