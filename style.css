@@ -102,6 +102,35 @@ body {
 }
 .gallery-item img:hover { filter: grayscale(0%); transform: scale(1.02); }
 
+.friday-banner {
+    background: linear-gradient(90deg, #043927, #064e3b, #043927);
+    color: #c5a059; /* Gold text */
+    text-align: center;
+    padding: 12px 20px;
+    font-size: 0.95rem;
+    border-bottom: 2px solid var(--gold);
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    animation: shimmer 3s infinite;
+}
+
+.banner-content strong {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@keyframes shimmer {
+    0% { opacity: 0.9; }
+    50% { opacity: 1; }
+    100% { opacity: 0.9; }
+}
+
+@media (max-width: 600px) {
+    .friday-banner { font-size: 0.85rem; }
+}
+
 /* Typography */
 .section-title { font-family: 'Cinzel'; font-size: 2.5rem; text-align: center; }
 .section-title.left { text-align: left; }
