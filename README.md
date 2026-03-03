@@ -5,14 +5,14 @@ It serves as a space to preserve his legacy, share memories, and celebrate his i
 
 ---
 
-## 🌟 Motivation
+##  Motivation
 
 The tribute was created to honour the life and contributions of Chief Imam Sododo.  
 It provides a digital identity that ensures his memory continues to inspire future generations.
 
 ---
 
-## 📖 Features
+##  Features
 
 - **Biography**: A detailed account of his life and achievements.  
 - **Photo Gallery**: Images that capture important moments.  
@@ -21,7 +21,7 @@ It provides a digital identity that ensures his memory continues to inspire futu
 
 ---
 
-## 🛠️ Installation & Setup
+##  Installation & Setup
 
 To run the project locally:
 
