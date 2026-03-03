@@ -15,7 +15,11 @@ body {
     line-height: 1.8;
 }
 
-.container { max-width: 1100px; margin: auto; padding: 0 20px; }
+.container { 
+    max-width: 1100px;
+     margin: auto; 
+     padding: 0 20px; 
+    }
 
 /* Hero */
 .hero {
@@ -53,6 +57,111 @@ body {
     border: 10px solid white;
 }
 
+
+/* Biography Styles */
+.bio-grid {
+     display: grid;
+      grid-template-columns: 2fr 1fr;
+       gap: 40px; 
+       margin-top: 40px; }
+
+.bio-text p {
+     font-size: 1.1rem;
+      margin-bottom: 20px;
+     }
+
+.bio-stats {
+     display: flex; 
+     flex-direction: 
+     column; gap: 45px;
+     }
+
+.stat-card { 
+    background: white;
+     padding: 20px;
+      border-left: 5px solid var(--gold);
+       box-shadow: 0 5px 15px rgba(0,0,0,0.05); 
+       text-align: center; 
+    }
+
+.stat-card strong { 
+    display: block; 
+    font-size: 1.5rem; 
+    color: var(--emerald); 
+}
+.stat-card span { 
+    font-size: 0.8rem;
+     text-transform: uppercase;
+      letter-spacing: 1px;
+     }
+
+/* Leadership Section */
+.leadership-section {
+     background: #ece8e1;
+      padding: 80px 0; }
+
+.centered-intro { 
+    text-align: center;
+     margin-bottom: 50px; 
+     font-style: italic; }
+
+.legacy-grid { 
+    display: grid;
+     grid-template-columns: 1fr 1fr; 
+     gap: 30px;
+}
+
+.leader-card { 
+    background: white; 
+    border-radius: 8px; 
+    overflow: hidden; 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1); 
+    text-align: center; 
+    transition: 0.3s; 
+}
+.leader-card:hover {
+     transform: translateY(-10px); 
+    }
+
+.leader-img {
+     width: 90%; 
+     height: 500px; 
+     object-fit: cover;
+      border-bottom: 5px solid var(--gold); 
+    }
+
+
+
+.leader-info {
+     padding: 25px; 
+    }
+
+.leader-info h3 
+{ margin: 0; 
+    font-family: 'Cinzel';
+     color: var(--emerald); 
+}
+
+.legacy-desc { 
+    text-align: center; 
+    margin-top: 40px; 
+    max-width: 700px; 
+    margin-left: auto; 
+    margin-right: auto; 
+    font-size: 1.1rem; 
+}
+
+@media (max-width: 768px) {
+    .bio-grid, .legacy-grid { grid-template-columns: 1fr; }
+}
+
+
+
+
+
+
+
+
 /* Letter Section */
 .letter-section { padding: 100px 0; background: #ece8e1; }
 .letter-paper {
@@ -86,21 +195,53 @@ body {
 .amen { font-weight: bold; font-size: 1.4rem; color: var(--gold); margin-top: 20px; }
 
 /* Grid */
-.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; padding: 100px 0; }
+.grid { 
+    display: grid; grid-template-columns: 1fr 1fr; 
+    gap: 50px; 
+    align-items: center;
+     padding: 100px 0; 
+    }
+
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     gap: 20px;
     margin-top: 40px;
 }
 .gallery-item img {
     width: 100%;
-    height: 350px;
+    height: 450px;
     object-fit: cover;
     filter: grayscale(30%);
     transition: 0.4s;
 }
-.gallery-item img:hover { filter: grayscale(0%); transform: scale(1.02); }
+.gallery-item img:hover { 
+    filter: grayscale(0%); 
+    transform: scale(1.02); }
+
+
+    @media (max-width: 480px) {
+    .grid {
+     display: grid; grid-template-columns: 1fr; 
+    align-items: center;
+   
+    }
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+
+    object-fit: cover;
+    margin-bottom: 20px;
+   
+    
+}
+.gallery-grid {
+    display: grid;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+    }
 
 .friday-banner {
     background: linear-gradient(90deg, #043927, #064e3b, #043927);
@@ -132,8 +273,15 @@ body {
 }
 
 /* Typography */
-.section-title { font-family: 'Cinzel'; font-size: 2.5rem; text-align: center; }
-.section-title.left { text-align: left; }
+.section-title {
+     font-family: 'Cinzel'; 
+     font-size: 2.5rem; 
+     text-align: center; 
+}
+
+.section-title.left {
+     text-align: left; 
+}
 
 @media (max-width: 768px) {
     .grid { grid-template-columns: 1fr; text-align: center; }
@@ -142,4 +290,9 @@ body {
     .letter-paper { padding: 30px; }
 }
 
-footer { text-align: center; padding: 40px; background: var(--dark); color: #666; font-size: 0.9rem; }
+footer { 
+    text-align: center; 
+    padding: 40px;
+     background: var(--dark); 
+     color: #fff; 
+     font-size: 0.9rem; }
