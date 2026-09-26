@@ -1,0 +1,14 @@
+
+@import "tailwindcss";
+
+@theme {
+  /* Custom Colors */
+  --color-cream: #fbf9f1;
+  --color-emerald: #064e3b;
+  --color-gold: #d4af37;
+  --color-dark: #1a1a1a;
+
+  /* Custom Fonts */
+  --font-cinzel: "Cinzel", serif;
+  --font-lato: "Lato", sans-serif;
+}
