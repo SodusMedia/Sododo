@@ -5,6 +5,8 @@ const tributeDataGeo = {
     description: "A biography and tribute site chronicling the journey, faith, and leadership of Alhaji Sheikh J.B. Sododo (1942–2011).",
     keywords: [
       "Alhaji J.B. Sododo",
+      "Alhaji Sododo",
+      "Imam Sododo",
       "Sododo tribute",
       "Islamic scholar Nigeria",
       "Deputy Chief Imam [Na'ib] Ikare Akoko",
