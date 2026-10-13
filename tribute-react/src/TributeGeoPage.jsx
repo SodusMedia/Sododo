@@ -6,6 +6,8 @@ const tributeDataGeo = {
     description: "A biography and tribute site chronicling the journey, faith, and leadership of Alhaji Sheikh J.B. Sododo (1942–2011).",
     keywords: [
       "Alhaji J.B. Sododo",
+       "Chief Imam Sododo",
+        "Alhaji Sododo",
       "Sododo tribute",
       "Islamic scholar Nigeria",
       "Deputy Chief Imam [Na'ib] Ikare Akoko",
@@ -16,7 +18,7 @@ const tributeDataGeo = {
     published: "2026-06-12",
     updated: "2026-09-25",
     image: "/assets/sododo_hero2.png",
-    url: "https://sododo-tribute.com/journey"
+    url: "https://sododo.vercel.app"
   }
 };
 
