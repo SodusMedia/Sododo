@@ -10,9 +10,9 @@ const tributeDataGeo = {
         "Alhaji Sododo",
       "Sododo tribute",
       "Islamic scholar Nigeria",
-      "Deputy Chief Imam [Na'ib] Ikare Akoko",
-      "Legacy of truth",
-      "15 year remembrance"
+      "Deputy Chief Imam Ikare Akoko",
+      "Legacy of Soododo",
+      "Sododo 15-year remembrance"
     ],
     author: "Sododo Family",
     published: "2026-06-12",
