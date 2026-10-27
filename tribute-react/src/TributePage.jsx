@@ -1,8 +1,8 @@
 import { Helmet } from "react-helmet-async";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+
 
 export default function TributePage() {
   useEffect(() => {
@@ -11,6 +11,25 @@ export default function TributePage() {
 
 
   const [isOpen, setIsOpen] = useState(false);
+
+
+  const galleryRef = useRef(null);
+
+  const scrollLeft = () => {
+    galleryRef.current?.scrollBy({
+      left: -350,
+      behavior: "smooth",
+    });
+  };
+
+  const scrollRight = () => {
+    galleryRef.current?.scrollBy({
+      left: 350,
+      behavior: "smooth",
+    });
+  };
+
+
 
   return (
     <div className="bg-cream text-dark font-lato">
@@ -100,7 +119,7 @@ export default function TributePage() {
     <img
       src="/assets/sododo_hero1.png"
       alt="Alhaji J.B. Sododo"
-      className="w-full h-[500px] object-cover"
+      className="w-full h-125 object-cover"
     />
   </div>
 </div>
@@ -168,7 +187,7 @@ export default function TributePage() {
         <img
           src="/assets/selim-sododo.jpg"
           alt="Alhaji Selim Sododo"
-          className="w-full h-[400px] object-cover"
+          className="w-full h-100 object-cover"
         />
       </div>
 
@@ -252,195 +271,223 @@ export default function TributePage() {
 
 
       {/* Gallery */}
-      <section id="gallery" className="py-12 max-w-5xl mx-auto px-6">
-        <h2 className="font-cinzel text-3xl text-center mb-6">Memories in Frames</h2>
-        <div className="flex overflow-x-scroll space-x-6 pb-4">
+      <section id="gallery" className="py-16 max-w-6xl mx-auto px-6" data-aos="fade-up"
+      >
+        <h2 className="font-cinzel text-3xl text-center mb-2">
+          Memories in Frames
+          </h2>
 
-    <div className="flex-shrink-0 w-80">
+            <p className="text-center text-gray-600 mb-8">
+    A journey through cherished moments.
+  </p>
+
+    <div className="relative">
+    {/* Left Arrow */}
+    <button
+      onClick={scrollLeft}
+      className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow-lg rounded-full w-12 h-12 flex items-center justify-center hover:bg-emerald hover:text-white transition"
+    >
+      ←
+    </button>
+
+ {/* Gallery Container */}
+    <div
+      ref={galleryRef}
+      className="flex gap-6 overflow-x-auto scroll-smooth scrollbar-hide px-12"
+    >
+
+    <div className="shrink-0 w-80">
            <img 
            src="/assets/sododo_withdad.jpg" 
            alt="Sododo's Memories"
-            className="w-full h-[250px] object-cover rounded shadow"
+            className="w-full h-62.5 object-cover rounded shadow"
             />
             <p className="text-center mt-2">Imam Sododo with his Father 1973</p>
           </div>
 
-          <div className="flex-shrink-0 w-80">
+          <div className="shrink-0 w-80">
             <img
               src="/assets/sododo_mko.png"
               alt="Imam Sododo with MKO Abiola"
-              className="w-full h-[250px] object-cover rounded shadow"
+              className="w-full h-62.5 object-cover rounded shadow"
             />
             <p className="text-center mt-2">Imam Sododo with MKO Abiola</p>
           </div>
 
-          <div className="flex-shrink-0 w-80">
+          <div className="shrink-0 w-80">
             <img
               src="/assets/sododoUSA.jpg"
               alt="Imam Sododo in USA 2022-23"
-              className="w-full h-[250px] object-cover rounded shadow"
+              className="w-full h-62.5 object-cover rounded shadow"
             />
             <p className="text-center mt-2">Imam Sododo in USA 2022-23</p>
           </div>
 
          
 
-             <div className="flex-shrink-0 w-80">
+             <div className="shrink-0 w-80">
            <img 
            src="/assets/sododo_ikare2.jpg" 
            alt="Sododo's Memories"
-              className="w-full h-[250px] object-cover rounded shadow"
+              className="w-full h-62.5 object-cover rounded shadow"
             />
             <p className="text-center mt-2">Imam Sododo's memories</p>
           </div>
 
-             <div className="flex-shrink-0 w-80">
+             <div className="shrink-0 w-80">
             <img
               src="/assets/sododo_ikare3.jpg"
               alt="Imam Sododo in Ikare Akoko"
-              className="w-full h-[250px] object-cover rounded shadow"
+              className="w-full h-62.5 object-cover rounded shadow"
             />
             <p className="text-center mt-2">Imam Sododo's memories</p>
           </div>
 
-             <div className="flex-shrink-0 w-80">
+             <div className="shrink-0 w-80">
             <img
               src="/assets/sododo_teach.jpg"
               alt="Imam Sododo teaching"
-              className="w-full h-[250px] object-cover rounded shadow"
+              className="w-full h-72.5 object-cover rounded shadow"
             />
             <p className="text-center mt-2">Imam Sododo's memories</p>
           </div>
 
-             <div className="flex-shrink-0 w-80">
+             <div className="shrink-0 w-80">
             <img
               src="/assets/sododo_teach2.jpg"
               alt="Imam Sododo teaching"
-              className="w-full h-[250px] object-cover rounded shadow"
+              className="w-full h-72.5 object-cover rounded shadow"
             />
             <p className="text-center mt-2">Imam Sododo's memories</p>
           </div>
 
-             <div className="flex-shrink-0 w-80">
+             <div className="shrink-0 w-80">
             <img
               src="/assets/sododo_teach3.jpg"
               alt="Imam Sododo teaching"
-              className="w-full h-[250px] object-cover rounded shadow"
+              className="w-full h-71.5 object-cover rounded shadow"
             />
             <p className="text-center mt-2">Imam Sododo's memories</p>
           </div>
 
-             <div className="flex-shrink-0 w-80">
+             <div className="shrink-0 w-80">
             <img
               src="/assets/sododo_france.jpg"
               alt="Imam Sododo in france"
-              className="w-full h-[250px] object-cover rounded shadow"
+              className="w-full h-63.5 object-cover rounded shadow"
             />
             <p className="text-center mt-2">Imam Sododo's memories</p>
           </div>
 
-             <div className="flex-shrink-0 w-80">
+             <div className="shrink-0 w-80">
             <img
               src="/assets/sododo_saudi.jpg"
               alt="Imam Sododo in saudi"
-              className="w-full h-[250px] object-cover rounded shadow"
+              className="w-full h-60.5 object-cover rounded shadow"
             />
             <p className="text-center mt-2">Imam Sododo's memories</p>
           </div>
 
-             <div className="flex-shrink-0 w-80">
+             <div className="shrink-0 w-80">
             <img
               src="/assets/sododo_saudi2.jpg"
               alt="Imam Sododo in saudi"
-              className="w-full h-[250px] object-cover rounded shadow"
+              className="w-full h-62.5 object-cover rounded shadow"
             />
             <p className="text-center mt-2">Imam Sododo's memories</p>
           </div>
 
-             <div className="flex-shrink-0 w-80">
+             <div className="shrink-0 w-80">
             <img
               src="/assets/sododo_saudi3.jpg"
               alt="Imam Sododo in saudi"
-              className="w-full h-[250px] object-cover rounded shadow"
+              className="w-full h-62 object-cover rounded shadow"
             />
             <p className="text-center mt-2">Imam Sododo's memories</p>
           </div>
 
-             <div className="flex-shrink-0 w-80">
+             <div className="shrink-0 w-80">
             <img
               src="/assets/sododo_scholar.jpg"
               alt="Imam Sododo collects Bsc"
-              className="w-full h-[250px] object-cover rounded shadow"
+              className="w-full h-80 object-cover rounded shadow"
             />
             <p className="text-center mt-2">Imam Sododo's memories</p>
           </div>
 
-             <div className="flex-shrink-0 w-80">
+             <div className="shrink-0 w-80">
             <img
               src="/assets/sododo_scholar2.jpg"
               alt="Imam Sododo in uni"
-              className="w-full h-[350px] object-cover rounded shadow"
+              className="w-full h-80 object-cover rounded shadow"
             />
             <p className="text-center mt-2">Imam Sododo's memories</p>
           </div>
 
-             <div className="flex-shrink-0 w-80">
+             <div className="shrink-0 w-80">
             <img
               src="/assets/sododo_lagos.jpg"
               alt="Imam Sododo in lagos state"
-              className="w-full h-[250px] object-cover rounded shadow"
+              className="w-full h-65 object-cover rounded shadow"
             />
             <p className="text-center mt-2">Imam Sododo's memories</p>
           </div>
 
-             <div className="flex-shrink-0 w-80">
+             <div className="shrink-0 w-80">
             <img
               src="/assets/sododo_lagos2.jpg"
               alt="Imam Sododo in lagos"
-              className="w-full h-[350px] object-cover rounded shadow"
+              className="w-full h-78 object-cover rounded shadow"
             />
             <p className="text-center mt-2">Imam Sododo's memories</p>
           </div>
 
-             <div className="flex-shrink-0 w-80">
+             <div className="shrink-0 w-80">
   <img
     src="/assets/sododo_uae.jpg"
     alt="Imam Sododo in UAE"
-    className="w-full h-[400px] object-cover rounded shadow"
+    className="w-full h-100 object-cover rounded shadow"
   />
   <p className="text-center mt-2">Imam Sododo's memories</p>
 </div>
 
-<div className="flex-shrink-0 w-80">
+<div className="shrink-0 w-80">
   <img
     src="/assets/sododo_eid.jpg"
     alt="Imam Sododo leading eid prayer"
-    className="w-full h-[450px] object-cover rounded shadow"
+    className="w-full h-120 object-cover rounded shadow"
   />
   <p className="text-center mt-2">Imam Sododo's memories</p>
 </div>
 
 
-             <div className="flex-shrink-0 w-80">
+             <div className="shrink-0 w-80">
             <img
               src="/assets/sododo_usa4.jpg"
               alt="Imam Sododo in usa"
-              className="w-full h-[250px] object-cover rounded shadow"
+              className="w-full h-62.5 object-cover rounded shadow"
             />
             <p className="text-center mt-2">Imam Sododo's memories</p>
           </div>
 
-<div className="flex-shrink-0 w-80">
+<div className="shrink-0 w-80">
             <img
               src="/assets/sododo_arisekola.jpg"
-              alt="Imam Sododo with arisekola"
-              className="w-full h-[250px] object-cover rounded shadow"
+              alt="Imam Sododo with arisekola "
+              className="w-full h-62.5 object-cover rounded shadow"
             />
-            <p className="text-center mt-2">Imam Sododo with Arisekola Alao</p>
+            <p className="text-center mt-2">Imam Sododo with Arisekola Alao </p>
           </div>
-
-
         </div>
+
+         {/* Right Arrow */}
+    <button
+      onClick={scrollRight}
+      className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow-lg rounded-full w-12 h-12 flex items-center justify-center hover:bg-emerald hover:text-white transition"
+    >
+      →
+    </button>
+  </div>
       </section>
 
       {/* Footer */}
