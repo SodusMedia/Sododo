@@ -428,7 +428,7 @@ export default function TributePage() {
             <img
               src="/assets/sododo_lagos.jpg"
               alt="Imam Sododo in lagos state"
-              className="w-full h-65 object-cover rounded shadow"
+              className="w-full h-45 object-cover rounded shadow"
             />
             <p className="text-center mt-2">Imam Sododo's memories</p>
           </div>
